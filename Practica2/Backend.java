@@ -16,7 +16,7 @@ public class Backend extends Thread {
 
     //palabras
     String[] palabrasEscritas = new String[limit];
-    String[] palabras = {"Palabra", "Moneda", "Dinero", "Pastel", "Bienvenido" , "huuuu"};
+    String[] palabras = {"cliente", "conexion", "ip", "mensaje", "puerto" , "request", "socket", "tcp", "comunicaicon", "consola", "java", "protocolo", "red", "servidor", "ssh"};
     String[] palabrasElegidas = new String[limit];
     int[] indexElegidos = new int[limit];
 

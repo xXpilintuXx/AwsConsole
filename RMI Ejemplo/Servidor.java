@@ -20,6 +20,6 @@ public class Servidor {
         }, 0);
         Registry registry = LocateRegistry.createRegistry(PUERTO);
        	System.out.println("Servidor escuchando en el puerto " + String.valueOf(PUERTO));
-        registry.bind("Ejemplo", remote); // Registrar calculadora
+        registry.rebind("Ejemplo", remote); // Registrar calculadora
     }
 }

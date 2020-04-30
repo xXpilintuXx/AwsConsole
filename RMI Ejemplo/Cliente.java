@@ -8,14 +8,17 @@ public class Cliente {
 	private static final int PUERTO = 1100; //Si cambias aquí el puerto, recuerda cambiarlo en el servidor
 	
     public static void main(String[] args) throws RemoteException, NotBoundException {
+        System.out.print("Intentando Conexion\n");
         Registry registry = LocateRegistry.getRegistry(IP, PUERTO);
+        System.out.print("Conexion completa, buscando en registro\n");
         Interfaz interfaz = (Interfaz) registry.lookup("Ejemplo"); //Buscar en el registro...
-		String respuesta;
+        System.out.print("encontrado el registro\n");
+        String respuesta;
 		Scanner sc = new Scanner(System.in);
 		int eleccion=1;
 		do {
             
-    
+            System.out.print("Creando Respuesta\n");
 				respuesta = interfaz.hola("Victor");
 	                  
 

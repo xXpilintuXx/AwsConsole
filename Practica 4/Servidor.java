@@ -16,10 +16,29 @@ public class Servidor {
                 return "Hola "+ nombre + " Te Saludo Desde el Servidor!";
             };
 
+            @Override
+            public float Suma(float num1, float num2){
+                return num1+num2;
+            };
+
+            @Override
+            public float Resta(float num1, float num2){
+                return num1-num2;
+            }
+
+            @Override
+            public float Division(float num1, float num2){
+                return num1/num2;
+            }
             
+            @Override
+            public float Multiplicacion(float num1, float num2){
+                return num1*num2;
+            }
+
         }, 0);
         Registry registry = LocateRegistry.createRegistry(PUERTO);
        	System.out.println("Servidor escuchando en el puerto " + String.valueOf(PUERTO));
-        registry.bind("Ejemplo", remote); // Registrar calculadora
+        registry.rebind("Calculadora", remote); // Registrar calculadora
     }
 }

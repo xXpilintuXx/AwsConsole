@@ -48,7 +48,7 @@ public class Backend extends Thread {
                     System.out.println(ch[i]+" = "+(int)ch[i]+"\n"+(response-(int)ch[i])+" + "+(int)ch[i]+" = "+response);
                 }
 
-                dos.writeUTF("El valor total de "+received+" es: "+response+"\nPulsa cualquier tecla para continuar");
+                dos.writeUTF("El valor total de "+received+" es: "+response+"\n Pulsa cualquier tecla para continuar");
                 this.dis.readUTF();
                 response = 0;
                 received = "";
